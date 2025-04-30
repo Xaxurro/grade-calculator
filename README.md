@@ -23,7 +23,7 @@ It sorts the grades by date.
             /* name of the grade */
             "name": "test 1",
 
-            /* optional, date of the grade, format %d-%d */
+            /* optional, date of the grade, format DD-MM */
             "date": "01-03",
 
             /* percentage of the score divided by 100 obtained that will be substracted to the minimum, example: 20% -> 0.20 */
