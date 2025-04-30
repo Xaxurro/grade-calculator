@@ -8,6 +8,9 @@
 reads all your grades with their weight and tells you what score do you need to pass the subject.
 It sorts the grades by date.
 
+# How does it works?
+`calculator.bin json_file`
+
 # JSON Structure
 ```
 {
