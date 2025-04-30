@@ -28,6 +28,7 @@ cJSON* readJson(char *buffer) {
 	return json;
 }
 
+/* gets the current total score of the subject */
 double getScoreTotal() {
 	double scoreTotal = 0;
 	for (int i = 0; i < getGradeArraySize(); i++) {
@@ -87,12 +88,12 @@ int main(int argc, char *argv[])
 	cJSON *gradeNew = NULL;
 
 	cJSON_ArrayForEach(gradeNew, gradeJSON) {
-		cJSON *subject = cJSON_GetObjectItem(gradeNew, "subject");
+		cJSON *name = cJSON_GetObjectItem(gradeNew, "name");
 		cJSON *weight = cJSON_GetObjectItem(gradeNew, "weight");
 		cJSON *score = cJSON_GetObjectItem(gradeNew, "score");
 		cJSON *date = cJSON_GetObjectItem(gradeNew, "date");
 
-		addGrade(subject, weight, score, date);
+		addGrade(name, weight, score, date);
 	}
 
 	sortGrades();

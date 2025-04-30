@@ -21,12 +21,12 @@ It sorts the grades by date.
     "grades": [
         {
             /* name of the grade */
-            "subject": "test 1",
+            "name": "test 1",
 
             /* optional, date of the grade, format %d-%d */
             "date": "01-03",
 
-            /* weight of the score obtained that will be substracted to the minimum */
+            /* percentage of the score divided by 100 obtained that will be substracted to the minimum, example: 20% -> 0.20 */
             "weight": double,
 
             /* optional, score obtained of the grade */

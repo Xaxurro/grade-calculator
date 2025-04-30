@@ -15,7 +15,8 @@ date stringToDate(char *str) {
 /* returns 1 if date1 is bigger than date2
  * returns -1 if date2 is bigger than date1 
  * returns 0 if date1 equals date2 
- * always considers error dates (have day & month == 0) as the smallest*/
+ * always considers error dates (day && month == 0) as the biggest
+ * meaning that it will be always at the end of the array*/
 int compareDates(date date1, date date2) {
 	if (date1.day != 0 && date2.day == 0) return -1;
 	if (date1.day == 0 && date2.day != 0) return 1;

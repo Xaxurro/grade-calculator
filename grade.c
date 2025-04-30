@@ -15,12 +15,12 @@ grade getGrade(int index) {
 	return gradeArray[index];
 }
 
-void addGrade(cJSON *subject, cJSON *weight, cJSON *score, cJSON *date) {
+void addGrade(cJSON *name, cJSON *weight, cJSON *score, cJSON *date) {
 	grade newGrade;
 
-	/* subject */
-	if (subject != NULL) {
-		newGrade.subject = cJSON_GetStringValue(subject);
+	/* name */
+	if (name != NULL) {
+		newGrade.name = cJSON_GetStringValue(name);
 	}
 
 	/* weight */
@@ -48,7 +48,7 @@ void addGrade(cJSON *subject, cJSON *weight, cJSON *score, cJSON *date) {
 }
 
 void printGrade(grade grade) {
-	printf("\t%s(%d-%d): %.0f%% -> %.0f\n", grade.subject, grade.date.day, grade.date.month, grade.weight * 100, grade.score);
+	printf("\t%s (%d-%d): %.0f%% -> %.0f\n", grade.name, grade.date.day, grade.date.month, grade.weight * 100, grade.score);
 }
 
 double getWeightedScore(grade grade) {
@@ -57,6 +57,7 @@ double getWeightedScore(grade grade) {
 
 void sortGrades() {
 	/* bubble sort */
+	/* sorts the array in ascent order */
 	for (int i = 0; i < gradeArraySize - 1; i++) {
 		for (int j = 0; j < gradeArraySize - i - 1; j++) {
 			if (compareDates(gradeArray[j].date, gradeArray[j + 1].date) == 1) {
