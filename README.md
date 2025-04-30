@@ -1,8 +1,8 @@
 # Dependencies: 
-    - [cjson](https://github.com/DaveGamble/cJSON)
+- [cjson](https://github.com/DaveGamble/cJSON)
 
 # How to compile:
-    `your_favorite_c_compiler main.c date.c grade.c -lcjson -o calculator.bin`
+`your_favorite_c_compiler main.c date.c grade.c -lcjson -o calculator.bin`
 
 # What does it do?
 reads all your grades with their weight and tells you what score do you need to pass the subject.
